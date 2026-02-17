@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Kiki ❤️</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.4em;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+button {
+  margin-top: 25px;
+  padding: 14px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4f81;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255,255,255,0.8);
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+#hiddenMessage {
+  display: none;
+  margin-top: 25px;
+  font-size: 1.5em;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>I'm sorry, my Kiki ❤️</h1>
+
+<p id="typing"></p>
+
+<button onclick="showMessage()">Click here, Sanya 🥺</button>
+
+<div id="hiddenMessage">
+<p>
+Sanya, my love...  
+
+I'm sorry for all the mistakes I've ever done that caused harm to you.  
+You never deserved any pain, especially not from me.  
+
+You are the most precious person in my life.  
+My peace. My happiness. My home.  
+
+I hate myself for the moments I made you sad.  
+If I could go back, I would fix everything just to protect your smile.  
+
+I promise you, Bablu will always try to be better. For you. Because of you.  
+
+You are my heart.  
+You are my forever.  
+
+I love you endlessly ❤️
+</p>
+</div>
+
+</div>
+
+<script>
+const text = "Sanya... I don't know if words will ever be enough, but I need you to know this from my heart. I'm truly sorry. Not just for one mistake, but for every moment I ever hurt you. You mean everything to me. You always have. You always will.";
+
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 45);
+  }
+}
+typeWriter();
+
+function showMessage() {
+  document.getElementById("hiddenMessage").style.display = "block";
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 25 + 15 + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
