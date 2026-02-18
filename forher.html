@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Good Night ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      padding-top: 50px;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .message {
+      font-size: 24px;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      background: pink;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Good Night ❤️</h1>
+
+<img src="IMG_6849.jpeg">
+
+<div class="message">
+You are the best thing that ever happened to me. ❤️  
+I love you more than words can ever explain.  
+Sleep well, my love.
+</div>
+
+<br>
+
+<button onclick="playSong()">Play Song 🎵</button>
+
+<br><br>
+
+<audio id="song">
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playSong() {
+  document.getElementById("song").play();
+}
+</script>
+
+</body>
+</html>
